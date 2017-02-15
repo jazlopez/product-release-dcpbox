@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Tracking - JIRA Exported Issues</title>
+    <script type="text/javascript" src="latest-dcpbox.v.1.0.0.js"></script>
+    <script type="text/javascript" src="node_modules/json-formatter-js/dist/json-formatter.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+        body{
+            background: #e0e0e0;
+        }
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button {
+            /* This background is dark, so we set text to white. Use 87% black instead if
+               your background is light. */
+            background: #fff;
+            color: #444;
+        }
+
+        .mdl-card {
+            width: 100%;
+        }
+
+        .mdl-card__media {
+            background-color: #283646 !important;
+        }
+
+        .demo-layout-transparent .mdl-navigation__link {
+            color: #444;
+        }
+
+        #content {
+            text-transform: capitalize;
+        }
+
+        .credits {
+            text-align: center; font-size: .7em; text-transform: uppercase;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div><label>DEFECT TRACKING SHEET</></div>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+
+                <img src="http://www.artedigital-mx.com/wp-content/uploads/2015/05/logoad.png" height="50">
+
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title" style="text-align: center">
+            <img src="http://www.dcpbox.com/dist/images/logo-dcpbox.png">
+        </span>
+        <div style="text-align: center"><h5>DOCUMENTATION</h5></div>
+        <hr/>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">VERSION</a>
+            <a class="mdl-navigation__link" href="">COMPONENTS</a>
+            <a class="mdl-navigation__link" href="">DEFECT TRACKING</a>
+            <span class="mdl-navigation__links" style="position:absolute; bottom:0; left: 1%; right: 1%;">
+                <div class="credits" ><a href="mailto:jaziel@artedigital-mx.com">Jaziel Lopez, Software Developer</a></div>
+                </span>
+        </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="mdl-grid">
+
+                <div class="mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-layout__header-row">
+                            <b>Status:</b><span></span>RESOLVED</span>
+                            <div class="mdl-layout-spacer"></div>
+                            <b>Engineer:</b>JAZIEL LOPEZ
+                            <div class="mdl-layout-spacer"></div>
+                            <b>QA:</b>ARTE DIGITAL
+                            <div class="mdl-layout-spacer"></div>
+                            <b>DATE:</b>FEB, 2017
+                        </div>
+                        <hr/>
+                        <div id="content" class="mdl-card__supporting-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--<div class="demo-layout-transparent mdl-layout mdl-js-layout">-->
+    <!---->
+    <!---->
+    <!--<header class="mdl-layout__header header_= mdl-layout&#45;&#45;fixed-header">-->
+    <!--<div class="mdl-layout__header-row">-->
+    <!--&lt;!&ndash;<img src="http://www.artedigital-mx.com/wp-content/uploads/2015/05/logoad.png">&ndash;&gt;-->
+    <!--<span class="mdl-layout__title"></span>-->
+    <!--<label>-->
+    <!--<h5>DPCBOX Product Specification</h5>-->
+    <!--</label>-->
+    <!--&lt;!&ndash; Title &ndash;&gt;-->
+    <!--<div class="mdl-layout-spacer"></div>-->
+    <!--&lt;!&ndash; Navigation &ndash;&gt;-->
+    <!--<nav class="mdl-navigation">-->
+    <!--&lt;!&ndash; Add spacer, to align navigation to the right &ndash;&gt;-->
+    <!--<div>-->
+    <!--<img class="mdl-navigation__link" src="http://www.artedigital-mx.com/wp-content/uploads/2015/05/logoad.png">-->
+    <!--</div>-->
+    <!--</nav>-->
+    <!--</div>-->
+    <!--</header>-->
+
+    <!--<div class="mdl-layout__drawer">-->
+
+    <!--<label>-->
+    <!--<h5>DPCBOX</h5>-->
+    <!--<p>Product Specification</p>-->
+    <!--</label>-->
+
+    <!--<nav class="mdl-navigation">-->
+    <!--<a class="mdl-navigation__link" href="">Modules</a>-->
+    <!--<a class="mdl-navigation__link" href="">Issue Tracker</a>-->
+    <!--<a class="mdl-navigation__link" href="">Contact</a>-->
+    <!--</nav>-->
+    <!--</div>-->
+
+
+    <!--</div>-->
+    <script type="text/javascript">
+        (function(){
+            'use strict';
+
+            var formatter = new JSONFormatter(issues, 3, {
+                theme: '',
+                hoverPreviewEnabled: false,
+                hoverPreviewArrayCount: 100,
+                hoverPreviewFieldCount: 5,
+                animateOpen: true,
+                animateClose: true
+            });
+
+            document.getElementById('content').appendChild(formatter.render());
+        })();
+    </script>
+</body>
+</html>
