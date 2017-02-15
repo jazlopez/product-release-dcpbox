@@ -1,7 +1,7 @@
 # Product Release Documentation Template
-## DCPbox / DF/ Feb 2017
+## DCPbox v.1.0.0, Release Date: Feb 2017
 
-> Documentation template for demonstration purposes.
+> Documentation template for demonstration purposes / project owner defect tracking efforts.
 >
 > Jaziel Lopez, Software Developer, http://jlopez.mx
 >
